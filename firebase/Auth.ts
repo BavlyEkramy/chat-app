@@ -34,7 +34,7 @@ onAuthStateChanged(auth, (user) => {
       .then((us) => AsyncStorage.setItem("user", JSON.stringify(us)))
       .catch((e) => console.log(e));
   } else {
-    AsyncStorage.setItem("user", "");
+    AsyncStorage.removeItem("user")
   }
 });
 
